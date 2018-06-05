@@ -23,7 +23,7 @@ $(document).ready(function () {
     }
     function cbSearch1(resp) {
         if(!resp.result) return;
-        var result = $.parseJSON(JSON.parse(resp.result));
+        var result = JSON.parse(resp.result);
         if(result !== 'null') {
             $("#news-description").empty();
             var html = $("#newsTemplate").html();
