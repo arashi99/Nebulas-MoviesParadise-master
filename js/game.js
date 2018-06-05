@@ -53,7 +53,7 @@ $(document).ready(function () {
     }
 
     $("#push").click(function () {
-        if(startFlag != 1){
+        if(pushFlag == 0){
             layer.alert('请先点击开始游戏后再提交答案！', {icon: 7});
             return;
         }
