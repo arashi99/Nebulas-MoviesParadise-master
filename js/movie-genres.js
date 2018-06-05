@@ -28,7 +28,7 @@ $(document).ready(function () {
 
     function cbSearch1(resp) {
         if(!resp.result) return;
-        var result = eval(JSON.parse(resp.result));
+        var result = $.parseJSON(JSON.parse(resp.result));
         if(result !== 'null') {
             $("#movie-genres-list").empty();
             if(result.length > 0){
@@ -62,7 +62,7 @@ $(document).ready(function () {
 
     function cbSearch2(resp) {
         if(!resp.result) return;
-        var result = eval(JSON.parse(resp.result));
+        var result = $.parseJSON(JSON.parse(resp.result));
         if(result !== 'null') {
             $("#hottest-movie-list").empty();
             if(result.length > 0){
